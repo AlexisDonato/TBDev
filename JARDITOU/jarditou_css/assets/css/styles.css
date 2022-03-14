@@ -1,0 +1,69 @@
+
+
+/* Ceci est une ligne de commentaire css */
+
+
+
+
+
+
+.logopromo {
+  width: 100%;
+  height: auto;
+	display: block;
+} 
+
+
+nav {
+  background-color: black;
+  text-indent: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+a{
+  color: white;
+}
+
+.menu {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  font-size: 10pt;
+}        
+
+#accueil {
+  font-size: 20pt;
+}
+
+/**********Ceci permet d'avoir 2 div côte à côte de même hauteur *************/
+.row {
+  display: flex;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+.col .col2 {
+  flex: 1; 
+}
+
+.col2 {
+  background-color: silver;
+  width: 100%;
+  height: auto;
+	display: block;
+}
+/* *************************************************************************** */
+
+#p1 {
+  font-size: 10pt;
+}  
+
+
+#p2 {
+  font-size: 10pt;
+}
+
+#p3 {
+  font-size: 10pt;
+} 
