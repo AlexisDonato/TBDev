@@ -92,7 +92,7 @@
             <legend>Votre demande</legend>
                 <label for="sujet">Sujet* :</label>
                 <select id="sujet"> 
-                    <option value="">Veuillez sélectionner un sujet</option>
+                    <option class="sujet" value="">Veuillez sélectionner un sujet</option>
                     <option value="commandes">Mes commandes</option>
                     <option value="produit">Question sur un produit</option>
                     <option value="réclamation">Réclamation</option>
@@ -100,7 +100,7 @@
                 </select>
                 <br>
                 <label for="question">Votre question* :</label>
-                <textarea name="commentaire" rows="2" cols="20"></textarea> 
+                <textarea name="commentaire" rows="2" cols="20" placeholder="Votre question" required title="Taper votre question ici"></textarea> 
                 <br>
                 <input type="checkbox" name="accepter" value="accepter">* J'accepte le traitement informatique de ce formulaire<br>
                 <input type="submit" name="envoyer" value="Envoyer">
