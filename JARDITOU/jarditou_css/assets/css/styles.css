@@ -1,6 +1,6 @@
 
 
-/* polices responsive*/
+/****** Polices responsive ******/
 
   html {
     font-size: 100%;
@@ -10,8 +10,16 @@
     font-size: 1.4rem;
   }
 
+  #tableau {
+    font-size: 1.4rem;
+  }
+
+  #contact {
+    font-size: 1.4rem;
+  }
+
   h1 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   #p1 {
@@ -31,8 +39,10 @@
     font-size: 1rem;
   }
 
+  #oops {
+    font-size: 5rem;
+  }
 /* ****************** */
-
 
 
 /* *******Logo et slogan côte à côte***** */
@@ -47,8 +57,6 @@
   }
 
   /* ************************************* */
-
-
 
 
   .logojarditou {
@@ -101,9 +109,16 @@
   }
 /* *************************************************************************** */
 
+  .tbl {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
-
-
+  .error {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
 /* ****Media Quieries: Responsive**** */
 
@@ -120,7 +135,7 @@
   /* ******************************** */
 
 
-  
+
   @media only screen and (max-device-width: 767px) {
     .col2 {
       display: none;
