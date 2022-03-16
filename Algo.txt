@@ -1,0 +1,26 @@
+Valider une date en Algo:
+
+DÉBUT
+ecrire "entrer la date  ( jj mm aa)"
+lire jour,mois,annee
+ecrire "vous avez entrer comme date",jour,"/",mois,"/",annee
+x=0
+si (jour<=31)  et (mois=1 ou mois=3 ou mois=5 ou mois=7 ou mois=8 ou mois=10 ou mois=12) et (annee>1900 et annee<2010)  alors
+x=1
+sinon si (jour<=30) et (mois=4 ou mois=6 ou mois=9 ou mois=11) et (annee>1900 et annee<2010) alors
+x=1
+Sinon si  (mois=2) et (annee>1900 et annee<2010) alors
+si (annee/4=annee//4) et (jour<=29) alors
+x=1
+sinon si (annee/4!=annee//4) et (jour<=28) alors
+x=1
+sinon
+x=0
+finsi
+finsi
+si x=1 alors
+ecrire "date valide"
+sinon
+ecrire "date non valide"
+finsi
+FIN
