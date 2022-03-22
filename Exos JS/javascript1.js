@@ -87,81 +87,22 @@ else {
 */
 
 
+var phrase = "Bonjour";
+var prenom = prompt("Entrez votre prénom");
+var nom = prompt("Entrez votre nom")
 
-var b;
-var c;
-b = parseInt(prompt("Entrez votre année de naissance (aaaa)"));
-c = parseInt(2022 - b);
-if (c >= 18)
+if (window.confirm("Etes vous un homme ?") == true) 
+{ 
+
+    alert(phrase+" Monsieur "+prenom+ " "+nom+",\nBienvenue sur notre site web !");   //***    \n pour retour à la ligne
+}
+
+else 
 {
-    document.write("Vous êtes majeur, ");
-}
- else
-{
-    document.write("Vous êtes mineur, ");
+    alert(phrase+" Madame "+prenom+ " "+nom+",")
+    alert("Bienvenue sur notre site web !");
 }
 
-    document.write("vous avez "+c+" ans");
 
 
 
-
-
-
-
-
-
-
-
-/*
-b = parseInt(prompt("Entrez votre date de naissance (jj-mm-aaaa)"));
-
-try{
-    var b=new Date('1/1/2001');
-    var Cnow=new Date();//current Date
-    if(Cnow.getFullYear()- b.getFullYear()<=18)
-    {
-    alert('Vous êtes mineur');
-    }
-    else
-    {
-        alert('Vous êtes majeur');  //success !!!
-    }
-
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  
-
-if(b.test(str_input_date))
-{
-     alert("valid date");
-}
-b = new Date(5/12/2022);
-
-if (b.setFullYear(b.getFullYear() + 18))
-{
-    document.write("Vous êtes majeur");
-}
-
-else
-{
-    document.write("Vous êtes mineur");
-}
-
-*/

@@ -86,24 +86,26 @@ else {
 
 */
 
-
-var phrase = "Bonjour";
-var prenom = prompt("Entrez votre prénom");
-var nom = prompt("Entrez votre nom")
-
-if (window.confirm("Etes vous un homme ?") == true) 
-{ 
-
-    alert(phrase+" Monsieur "+prenom+ " "+nom+",");
-    alert("Bienvenue sur notre site web !");
-}
-
-else 
+var prenoms = [];
+var prenom = "";
+var i = 1;
+while (true) 
 {
-    alert(phrase+" Madame "+prenom+ " "+nom+",")
-    alert("Bienvenue sur notre site web !");
+  prenom = prompt('Prénom n° ' + i);
+  console.log(prenom);
+
+  if (prenom == "" || prenom == null) 
+  {
+    break;
+  } 
+  else 
+  {
+      prenoms.push(prenom);
+      i++;
+  }
 }
-
-
+console.log("Prénoms :"+prenoms);
+console.log("Nombre de prénoms :"+prenoms.length);
+alert("Prénoms :"+prenoms+"\nNombre de prénoms :"+prenoms.length);
 
 

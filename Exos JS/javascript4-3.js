@@ -88,109 +88,35 @@ else {
 
 
 
-var a = 1;
-var b = 2;
-var c;
+let Ns = [];
+let N = 1;
 
-
-a = parseInt(prompt("Entrez un nombre"));
-b = parseInt(prompt("Entrez un deuxième nombre"));
-c = prompt("Entrez + OU - OU * OU /")
-
-if (c == "+")
+while (true) 
 {
-    console.log(a+b);
-    alert("Résultat :"+parseInt(a+b));
+  N = parseInt(prompt('Ecrire un nombre'));
+  console.log(N);
+
+  if (N == 0 || Number.isNaN(N) || N == "") 
+  {
+    break;
+  } 
+  else 
+  {
+      Ns.push(N);
+  }
 }
-    else if (c == "-")
-    {
-        console.log(a-b);
-        alert("Résultat :"+parseInt(a-b));
-    }
-    else if (c == "*")
-    {
-        console.log(a*b);
-        alert("Résultat :"+parseInt(a*b));
-    }
-    else if (c == "/")
-    {
-        if (b==0)
-        {
-            console.log("Vous ne pouvez pas diviser par 0")
-            alert("Vous ne pouvez pas diviser par 0")
-        }
-        else
-        {
-            console.log(a/b);
-            alert("Résultat :"+parseInt(a/b));
-        }
-        
-    }
-else
-{
-    console.log("Message d'erreur");
-}
-    
 
+// Manière de calculer une somme
+let sum = Ns.reduce((x,y) => x+y);
 
-
-
-
-
-
-
-
-
-
-/*
-b = parseInt(prompt("Entrez votre date de naissance (jj-mm-aaaa)"));
-
-try{
-    var b=new Date('1/1/2001');
-    var Cnow=new Date();//current Date
-    if(Cnow.getFullYear()- b.getFullYear()<=18)
-    {
-    alert('Vous êtes mineur');
-    }
-    else
-    {
-        alert('Vous êtes majeur');  //success !!!
-    }
-
-}
+/* 2e manière de calculer une somme
+for (e of Ns) sum += e;
 */
 
+console.log("Nombres :"+Ns);
+console.log("Quantité de nombres :"+Ns.length);
+console.log("Somme des nombres :"+sum);
+console.log("Moyenne :"+parseInt(sum/Ns.length));
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*  
-
-if(b.test(str_input_date))
-{
-     alert("valid date");
-}
-b = new Date(5/12/2022);
-
-if (b.setFullYear(b.getFullYear() + 18))
-{
-    document.write("Vous êtes majeur");
-}
-
-else
-{
-    document.write("Vous êtes mineur");
-}
-
-*/
