@@ -110,10 +110,6 @@ else {
 
 
 let Ns = [];
-let sum;
-let avg;
-let max;
-
 
 
 function getInteger(message)
@@ -136,52 +132,37 @@ function initTab()
 
 function saisieTab()
     {
-
-        for (let i=0; i<Ns.length; i++) 
+        for (let i = 0; i < Ns.length; i++) 
         {
-            N = getInteger('Saisie des postes ' + (i+1) + '/' + Ns.length);
-            Ns[i]=N;
+            N = getInteger('Saisie des postes ' + (i + 1) + '/' + Ns.length);
+            Ns[i] = N;
         }
     }
 
 
-function afficheTab()
-    {
-        console.table(Ns);
-    }
+// function afficheTab()
+//     {
+//         console.table(Ns);
+//     }
 
 
-function rechercheTab()
-    {
-        i = getInteger("Rechercher l'indice n°");
-        console.log("Indice "+i+" = "+Ns[i]);
-    }
+// function tri(Ns)
+// {
+//     for (i = 0; i < Ns.length; i++) 
+//     { 
+//         for (let j = 0; j < (Ns.length - i - 1); j++) 
+//         { 
+//             if (Ns[j] > Ns[j + 1]) 
+//             {
+//                 let tmp = Ns[j]; 
+//                 Ns[j] = Ns[j + 1]; 
+//                 Ns[j + 1] = tmp; 
+//             }
+//         }        
+//     }
+//     return Ns;
+// }
 
-function valMax()
-{
-    let max=0;
-    for (var i of Ns)
-    {
-        if (i>max)
-        {
-            max=i;
-        }
-    }
-    return max;
-}
-
-
-function infoTab()
-    {
-        sum = Ns.reduce((x,y) => x+y);
-        avg = sum/Ns.length;
-        console.log("Moyenne = "+avg);
-
-        valMax();
-        console.log("Nombre max = "+valMax());
-    }
-
-    
 
 initTab();
 
@@ -199,17 +180,11 @@ btn.addEventListener('click', event => {
 
 
 var btn2 = document.createElement("BUTTON");        
-var t = document.createTextNode("RechercheTab");       
+var t = document.createTextNode("Tri");       
 btn2.appendChild(t);                                
 document.body.appendChild(btn2);
 btn2.addEventListener('click', event => {
-    rechercheTab();
+    tri();
+    console.table(Ns);
 });
 
-var btn3 = document.createElement("BUTTON");        
-var t = document.createTextNode("RechercheTab");       
-btn3.appendChild(t);                                
-document.body.appendChild(btn3);
-btn3.addEventListener('click', event => {
-    infoTab();
-});
