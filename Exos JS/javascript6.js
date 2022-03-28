@@ -86,27 +86,73 @@ else {
 
 */
 
-var prenoms = [];
-var prenom = "";
-var i = 1;
-
-while (true) 
-{
-  prenom = prompt('Prénom n° ' + i);
-  console.log(prenom);
-
-  if (prenom == "" || prenom == null) 
-  {
-    break;
-  } 
-  else 
-  {
-      prenoms.push(prenom);
-      i++;
-  }
-}
-console.log("Prénoms :"+prenoms);
-console.log("Nombre de prénoms :"+prenoms.length);
-alert("Prénoms :"+prenoms+"\nNombre de prénoms :"+prenoms.length);
 
 
+
+
+
+// var btn = document.createElement("BUTTON");        // Créer un élément <button>
+// var t = document.createTextNode("CLICK ME");       // Créer un noeud textuel
+// btn.appendChild(t);                                // Ajouter le texte au bouton
+// document.body.appendChild(btn);                    // Ajoute la balise <button> à la balise <body>
+// button.addEventListener('click', event => {}       // Ajoute le dynamisme
+
+// document.body.removeChild(btn); ***** Pour retirer le bouton après clic *********  
+
+    //***** Ajouter du style aux boutons ********* */ 
+// btn0.style.position = "absolute";
+// btn0.style.top = "0px";
+// btn0.style.left = "500px";
+// btn0.style.width = "150px";
+// btn0.style.backgroundColor = "LightRed";
+// btn0.style.borderBlockColor = "Red";
+// btn0.style.color = "DarkRed";
+
+
+let N = 0;
+let C = 0;
+
+
+function getInteger(message)
+    {
+        let N = 0;
+        while (N == 0 || Number.isNaN(N))
+        {
+        N = parseInt(prompt(message));
+        }
+        return N;
+    }
+
+
+        N = getInteger('Entrez un nombre');
+        console.log(N);
+
+
+        let M = getInteger('Entrez un multiplicateur');
+        console.log(M);
+
+
+
+function afficheImg(src, alt)
+    {
+        let img = document.createElement("img");
+        img.src = src;
+        img.alt = alt;
+        document.body.appendChild(img);
+    }
+
+
+function cube()
+    { 
+        C  = parseInt(N * N * N);
+        return C;
+    }
+
+
+afficheImg('papillon.jpg', 'ImageJavascript');
+
+cube();
+
+// L'ajout de <br> dans document.write permet le retour à la ligne
+
+document.write("<br>Le cube de " + N + " est égal à " + C + "<br>Le produit de " + N + " x " + M + " est égal à " + (N*M));

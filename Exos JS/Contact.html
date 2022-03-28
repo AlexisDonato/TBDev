@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+    <title>Contact</title>
+
+    </head>
+           
+    <body>   
+    
+        <form action="http://bienvu.net/script.php" method="POST" id="formulaire_contact">  
+
+
+
+            <h2>* Ces zones sont obligatoires pour envoyer le formulaire</h2>
+            
+                    <fieldset>
+            
+                        <legend>Vos Coordonnées : </legend>
+
+                            <label for="societe">Société : </label><input type="text" id="societe" placeholder="" pattern="^[a-z]+$" minlength="1"><br>
+
+                        <p></p>
+
+                            <label for="personne">Personne à contacter : </label><input type="text" id="personne" placeholder="" pattern="^[a-z]+$" minlength="1"><br>
+                        
+                        <p></p>
+
+                            <label for="adresse">Adresse de l'entreprise : </label><textarea name="commentaire" id="adresse" rows="10" cols="50"></textarea></br>
+
+                        <p></p>
+
+                            <label for="cp">Code postal : </label><input type="text" id="cp" placeholder="" pattern="^[0-9]*$" length="5"><br>
+                        
+                        <p></p>
+                
+                            <label for="ville">Ville : </label><input type="text" id="ville" placeholder="" pattern="^[a-z]+$" minlength="1"><br>
+
+                        <p></p>   
+                        
+                            <label for="email">E-mail : </label><input type="text" id="email" placeholder="" pattern="^[a-z]+$" minlength="1"><br>
+
+                        <p></p>
+
+                            <label for="tel">Téléphone : </label><input type="text" id="tel" placeholder="" pattern="^0[1-9]([-. ]?[0-9]{2}){4}$"><br>
+
+                        <p></p>   
+                    
+                        <label for="environnement">Sélectionnez <br>l'environnement<br> technique du projet : </label><select id="environnement" size="1">
+                            <option value="Choisissez"></option>
+                            <option value="Access"></option>
+                            <option value="Java"></option>
+                            <option value="Delphi"></option>
+                            <option value="Windev"></option>
+                            <option value="Visual Basic"></option>
+                            <option value="Power Builder"></option>
+                            <option value="Internet"></option>
+                            <option value="Intranet"></option>
+                            <option value="Windows NT"></option>
+                            <option value="Unix"></option>
+                            <option value="SQL Server"></option>
+                            <option value="Oracle"></option>
+                            <option value="Autres..."></option>
+                            <br>
+
+                            <p></p>
+
+                    </fieldset>
+            
+                        <p></p>
+            
+                    <fieldset>
+            
+                        <legend>Votre demande</legend>
+                            <label for="sujet">Sujet* :</label>
+                            <select id="sujet"> 
+                                <option class="sujet" value="">Veuillez sélectionner un sujet</option>
+                                <option value="commandes">Mes commandes</option>
+                                <option value="produit">Question sur un produit</option>
+                                <option value="réclamation">Réclamation</option>
+                                <option value="autres">Autres</option>
+                            </select>
+                            <br>
+                            <label for="question">Votre question* :</label>
+                            <textarea name="commentaire" rows="2" cols="20" placeholder="Votre question" required title="Taper votre question ici"></textarea> 
+                            <br>
+            
+                    </fieldset>
+            
+                        <p></p>
+            
+                <input type="checkbox" name="accepter" value="accepter">* J'accepte le traitement informatique de ce formulaire<br>
+            
+                        <p></p>
+            
+                        <input type="submit" name="envoyer" value="Envoyer">
+                        <input type="reset" name="annuler" value="Annuler">
+
+
+
+
+            <script src="javascript6-6.js"></script>
+
+    </body>
+</html>

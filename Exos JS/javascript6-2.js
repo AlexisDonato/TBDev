@@ -86,27 +86,67 @@ else {
 
 */
 
-var prenoms = [];
-var prenom = "";
-var i = 1;
 
-while (true) 
-{
-  prenom = prompt('Prénom n° ' + i);
-  console.log(prenom);
 
-  if (prenom == "" || prenom == null) 
-  {
-    break;
-  } 
-  else 
-  {
-      prenoms.push(prenom);
-      i++;
-  }
-}
-console.log("Prénoms :"+prenoms);
-console.log("Nombre de prénoms :"+prenoms.length);
-alert("Prénoms :"+prenoms+"\nNombre de prénoms :"+prenoms.length);
 
+
+
+// var btn = document.createElement("BUTTON");        // Créer un élément <button>
+// var t = document.createTextNode("CLICK ME");       // Créer un noeud textuel
+// btn.appendChild(t);                                // Ajouter le texte au bouton
+// document.body.appendChild(btn);                    // Ajoute la balise <button> à la balise <body>
+// button.addEventListener('click', event => {}       // Ajoute le dynamisme
+
+// document.body.removeChild(btn); ***** Pour retirer le bouton après clic *********  
+
+    //***** Ajouter du style aux boutons ********* */ 
+// btn0.style.position = "absolute";
+// btn0.style.top = "0px";
+// btn0.style.left = "500px";
+// btn0.style.width = "150px";
+// btn0.style.backgroundColor = "LightRed";
+// btn0.style.borderBlockColor = "Red";
+// btn0.style.color = "DarkRed";
+
+
+let N;
+
+
+N = prompt('Ecrivez ici votre : Prénom; Nom; Ville; Code Postal');
+console.log(N);
+
+
+let re = /\s*(;|$)\s*/;
+let str1 = N.split(re);
+
+console.log(str1);
+
+
+function strtok()
+    {
+        i = prompt("Rechercher l'indice n°");
+        console.log("Indice "+(i)+" = "+str1[i]);
+    }
+
+
+strtok();
+
+
+// function splitString(stringToSplit, separator) {
+//     var arrayOfStrings = stringToSplit.split(separator);
+  
+//     console.log(`La chaine d'origine est : ${stringToSplit}`);
+//     console.log(`Le délimiteur est : ${separator}`);
+//     console.log(`Le tableau comporte ${arrayOfStrings.length} elements : `, arrayOfStrings.join(' / '));
+//   }
+  
+//   var tempestString = "Oh brave new world that has such people in it.";
+//   var monthString = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
+  
+//   var espace = " ";
+//   var virgule = ",";
+  
+//   splitString(tempestString, espace);
+//   splitString(tempestString);
+//   splitString(monthString, virgule);
 

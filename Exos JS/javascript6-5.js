@@ -109,81 +109,52 @@ else {
 // btn0.style.color = "DarkRed";
 
 
-let Ns = [];
-
-
-function getInteger(message)
-    {
-        let N = 0;
-        while (N == 0 || Number.isNaN(N))
-        {
-        N = parseInt(prompt(message));
-        }
-        return N;
-    }
-
-
-function initTab()
-    {
-        let P = getInteger('Nombre de postes souhaité');
-        Ns.length = P;
-    }
-
-
-function saisieTab()
-    {
-        for (let i = 0; i < Ns.length; i++) 
-        {
-            N = getInteger('Saisie des postes ' + (i + 1) + '/' + Ns.length);
-            Ns[i] = N;
-        }
-    }
-
-function afficheTab()
-    {
-        console.table(Ns);
-    }
-
-
-function triTab(Ns)
+function verif() 
 {
-    for (i = 0; i < Ns.length; i++) 
-    { 
-        for (let j = 0; j < (Ns.length - i - 1); j++) 
-        { 
-            if (Ns[j] > Ns[j + 1]) 
-            {
-                let tmp = Ns[j]; 
-                Ns[j] = Ns[j + 1]; 
-                Ns[j + 1] = tmp; 
-            }
-        }        
+    let proposedValue = textbox1.value;
+    let pattern = /^\d+$/;
+
+    if (pattern.test(proposedValue)) 
+    {
+      numberTry++;
+      proposedValue = parseInt(proposedValue);
+
+      if (proposedValue < valueToFind) 
+      {
+        document.getElementById('label1').innerHTML = "Trop petit!";
+        textbox1.value = '';
+        textbox1.focus();
+
+      } else if (proposedValue > valueToFind) 
+      {
+        document.getElementById('label1').innerHTML = "Trop grand!";
+        textbox1.value = '';
+        textbox1.focus();
+
+      } else 
+      {
+        document.getElementById('label1').innerHTML = "Bravo! Vous avez trouvé la solution en "+numberTry+" coups";
+      }
+
+    } else 
+    {
+      document.getElementById('label1').innerHTML = "La valeur proposée doit être un nombre!!";
     }
-    return Ns;
+
+    return false;
 }
+   
+  let maxValue    = 100;
+  let valueToFind = Math.floor((Math.random()*maxValue)+1);
+  let numberTry   = 0;
+  let textbox1  = document.getElementById('textbox1');
+   
 
-
-initTab();
-
-saisieTab();
-
-
-
-var btn = document.createElement("BUTTON");        
-var t = document.createTextNode("AfficheTab");       
-btn.appendChild(t);                                
-document.body.appendChild(btn);
-btn.addEventListener('click', event => {
-    afficheTab();
-});
-
-
-var btn2 = document.createElement("BUTTON");        
-var t = document.createTextNode("TriTab");       
-btn2.appendChild(t);                                
-document.body.appendChild(btn2);
-btn2.addEventListener('click', event => {
-    triTab(Ns);
-    console.table(Ns);
-});
-
+  if (valueToFind > maxValue) 
+  {
+    valueToFind = maxValue;
+  }
+   
+  document.getElementById('maxValue').innerHTML = maxValue;
+  textbox1.value = '';
+  textbox1.focus();

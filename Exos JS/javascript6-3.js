@@ -86,27 +86,52 @@ else {
 
 */
 
-var prenoms = [];
-var prenom = "";
-var i = 1;
+
+
+
+
+
+// var btn = document.createElement("BUTTON");        // Créer un élément <button>
+// var t = document.createTextNode("CLICK ME");       // Créer un noeud textuel
+// btn.appendChild(t);                                // Ajouter le texte au bouton
+// document.body.appendChild(btn);                    // Ajoute la balise <button> à la balise <body>
+// button.addEventListener('click', event => {}       // Ajoute le dynamisme
+
+// document.body.removeChild(btn); ***** Pour retirer le bouton après clic *********  
+
+    //***** Ajouter du style aux boutons ********* */ 
+// btn0.style.position = "absolute";
+// btn0.style.top = "0px";
+// btn0.style.left = "500px";
+// btn0.style.width = "150px";
+// btn0.style.backgroundColor = "LightRed";
+// btn0.style.borderBlockColor = "Red";
+// btn0.style.color = "DarkRed";
+
+
+let Ns = [];
+let N = 1;
 
 while (true) 
 {
-  prenom = prompt('Prénom n° ' + i);
-  console.log(prenom);
+  N = parseInt(window.prompt('Ecrire un nombre'));
+  console.log(N);
 
-  if (prenom == "" || prenom == null) 
+  if (N == 0 || Number.isNaN(N) || N == "") 
   {
     break;
   } 
   else 
   {
-      prenoms.push(prenom);
-      i++;
+      Ns.push(N);
   }
 }
-console.log("Prénoms :"+prenoms);
-console.log("Nombre de prénoms :"+prenoms.length);
-alert("Prénoms :"+prenoms+"\nNombre de prénoms :"+prenoms.length);
+
+// Manière de calculer une somme
+let sum = Ns.reduce((x,y) => x+y);
 
 
+console.log("Nombres :"+Ns);
+console.log("Quantité de nombres :"+Ns.length);
+console.log("Somme des nombres :"+sum);
+console.log("Moyenne :"+parseInt(sum/Ns.length));
