@@ -11,94 +11,165 @@
            
     <body>   
     
-        <form action="http://bienvu.net/script.php" method="POST" id="formulaire_contact">  
+        <form action="http://bienvu.net/script.php" name="formulaire" method="POST" id="formulaire">  
 
 
-
-            <h2>* Ces zones sont obligatoires pour envoyer le formulaire</h2>
             
                     <fieldset>
             
-                        <legend>Vos Coordonnées : </legend>
-
-                            <label for="societe">Société : </label><input type="text" id="societe" placeholder="" pattern="^[a-z]+$" minlength="1"><br>
+                            <legend> Vos Coordonnées : </legend>
 
                         <p></p>
 
-                            <label for="personne">Personne à contacter : </label><input type="text" id="personne" placeholder="" pattern="^[a-z]+$" minlength="1"><br>
+                        <p class="ast">*</p><legend2> Ces zones sont obligatoires pour envoyer le formulaire.</legend2>
+
+                        <p></p>
+                        <div class=row>
+                            <div class="col">   
+                            <label for="societe">Société : </label>
+                            </div>
+                            <aside>
+                                <input type="text" id="societe" name="société" required></p><br>
+                            </aside>
+                            <aside2>
+                                <p class="ast">*</p>
+                            </aside2>
+                        </div>
+
+                        <p></p>
+                        <div class=row>
+                            <div class="col">
+                            <label for="personne">Personne à contacter : </label>
+                            </div>
+                            <aside>
+                                <input type="text" id="personne" name="personne à contacter" required><br>
+                            </aside>
+                            <aside2>
+                                <p class="ast">*</p>
+                            </aside2>
+                        </div>
+
+
+                        <p></p>
+                        <div class=row>
+                            <div class="col">
+                            <label for="adresse">Adresse de l'entreprise : </label>
+                            </div>
+                            <aside>
+                                <textarea name="adresse" id="adresse" rows="4" cols="30"></textarea></br>
+                            </aside>
+                            <aside2>
+                            </aside2>
+                        </div>
+
+
+                        <p></p>
+                        <div class=row>
+                            <div class="col">
+                            <label for="cp">Code postal : </label>
+                            </div>
+                            <aside>
+                                <input type="text" id="cp" name="code postal" required><br>
+                            </aside>
+                            <aside2>
+                                <p class="ast">*</p>
+                            </aside2>
+                        </div>
+
                         
                         <p></p>
+                        <div class=row>
+                            <div class="col">
+                            <label for="ville">Ville : </label>
+                            </div>
+                            <aside>
+                                <input type="text" id="ville" name="ville" required><br>
+                            </aside>
+                            <aside2>
+                                <p class="ast">*</p>
+                            </aside2>
+                        </div>
 
-                            <label for="adresse">Adresse de l'entreprise : </label><textarea name="commentaire" id="adresse" rows="10" cols="50"></textarea></br>
-
-                        <p></p>
-
-                            <label for="cp">Code postal : </label><input type="text" id="cp" placeholder="" pattern="^[0-9]*$" length="5"><br>
-                        
-                        <p></p>
-                
-                            <label for="ville">Ville : </label><input type="text" id="ville" placeholder="" pattern="^[a-z]+$" minlength="1"><br>
 
                         <p></p>   
-                        
-                            <label for="email">E-mail : </label><input type="text" id="email" placeholder="" pattern="^[a-z]+$" minlength="1"><br>
+                        <div class=row>
+                            <div class="col">
+                            <label for="email">E-mail : </label>
+                            </div>
+                            <aside>
+                                <input type="text" id="email" name="email" required><br>
+                            </aside>
+                            <aside2>
+                                <p class="ast">*</p>
+                            </aside2>
+                        </div>
+
 
                         <p></p>
-
-                            <label for="tel">Téléphone : </label><input type="text" id="tel" placeholder="" pattern="^0[1-9]([-. ]?[0-9]{2}){4}$"><br>
+                        <div class=row>
+                            <div class="col">
+                            <label for="tel">Téléphone : </label>
+                            </div>
+                            <aside>
+                                <input type="text" id="tel" name="téléphone"><br>
+                            </aside>
+                            <aside2>
+                            </aside2>
+                        </div>
 
                         <p></p>   
+                        <p></p> 
+                        <p></p> 
+                        <p></p> 
+                        <p></p> 
+                        <p></p> 
+                        <p></p> 
+                        <p></p> 
+                        <p></p> 
+                        <p></p> 
                     
-                        <label for="environnement">Sélectionnez <br>l'environnement<br> technique du projet : </label><select id="environnement" size="1">
-                            <option value="Choisissez"></option>
-                            <option value="Access"></option>
-                            <option value="Java"></option>
-                            <option value="Delphi"></option>
-                            <option value="Windev"></option>
-                            <option value="Visual Basic"></option>
-                            <option value="Power Builder"></option>
-                            <option value="Internet"></option>
-                            <option value="Intranet"></option>
-                            <option value="Windows NT"></option>
-                            <option value="Unix"></option>
-                            <option value="SQL Server"></option>
-                            <option value="Oracle"></option>
-                            <option value="Autres..."></option>
-                            <br>
+                        <div class=row>
+                            <div class="col">
+                                <label for="environnement">Sélectionnez <br>l'environnement<br> technique du projet : </label><br>
+                                <select id="environnement">
+                                    <option class="choix" value="Choisissez">Choisissez</option>
+                                    <option value="Access">Access</option>
+                                    <option value="Java">Java</option>
+                                    <option value="Delphi">Delphi</option>
+                                    <option value="Windev">Windev</option>
+                                    <option value="Visual Basic">Visual Basic</option>
+                                    <option value="Power Builder">Power Builder</option>
+                                    <option value="Internet">Internet</option>
+                                    <option value="Intranet">Intranet</option>
+                                    <option value="Windows NT">Windows NT</option>
+                                    <option value="Unix">Unix</option>
+                                    <option value="SQL Server">SQL Server</option>
+                                    <option value="Oracle">Oracle</option>
+                                    <option value="Autres...">Autres...</option>
+                                </select>
+                                    <br>
+                            </div>
 
+                            <aside>
+                                <label for="comment"></label><textarea name="commentaire" id="comment" rows="5" cols="25"></textarea></br>
+                            </aside>
+                            <aside2>
+                            </aside2>
+                        </div>
                             <p></p>
 
                     </fieldset>
             
                         <p></p>
             
-                    <fieldset>
-            
-                        <legend>Votre demande</legend>
-                            <label for="sujet">Sujet* :</label>
-                            <select id="sujet"> 
-                                <option class="sujet" value="">Veuillez sélectionner un sujet</option>
-                                <option value="commandes">Mes commandes</option>
-                                <option value="produit">Question sur un produit</option>
-                                <option value="réclamation">Réclamation</option>
-                                <option value="autres">Autres</option>
-                            </select>
-                            <br>
-                            <label for="question">Votre question* :</label>
-                            <textarea name="commentaire" rows="2" cols="20" placeholder="Votre question" required title="Taper votre question ici"></textarea> 
-                            <br>
-            
-                    </fieldset>
-            
                         <p></p>
-            
-                <input type="checkbox" name="accepter" value="accepter">* J'accepte le traitement informatique de ce formulaire<br>
-            
-                        <p></p>
-            
-                        <input type="submit" name="envoyer" value="Envoyer">
-                        <input type="reset" name="annuler" value="Annuler">
-
+                    
+                        
+                            <div class="boutons">
+                                <input type="submit" id="submit" name="envoyer" value="Envoyer">
+                                <input type="reset" id="reset" name="annuler" value="Annuler">
+                            </div>
+                     
 
 
 
