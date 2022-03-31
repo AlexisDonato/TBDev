@@ -116,8 +116,8 @@ if (c == "+")
     {
         if (b==0)
         {
-            console.log("Vous ne pouvez pas diviser par 0")
-            alert("Vous ne pouvez pas diviser par 0")
+            console.log("Vous ne pouvez pas diviser par 0");
+            alert("Vous ne pouvez pas diviser par 0");
         }
         else
         {

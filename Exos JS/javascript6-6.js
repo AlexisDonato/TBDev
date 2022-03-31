@@ -142,29 +142,53 @@ let l =  document.getElementsByTagName("label");
     document.getElementsByClassName("row")[0].style = "display: flex;"; 
     document.getElementsByClassName("boutons")[0].style = "text-align: center;";
 
+    document.getElementsByTagName("body")[0].style = "background-color: lightBlue;";
     document.getElementsByTagName("legend")[0].style = "font-size: 2rem; font-weight: bold;";
     document.getElementsByTagName("legend2")[0].style = "font-size: 1.5rem; font-weight: bold; color: red;";
+ 
     
-
-    document.getElementById("environnement").addEventListener("click", event =>
+    let env = document.getElementById("environnement");
+    env.addEventListener("click", event =>
     {
         document.getElementsByClassName("choix")[0].style = "display: none;";
     })    
+
+    env.addEventListener("change", function()
+    {
+        document.getElementById('comment').value=this.value;
+    })
 
 
 function checkForm(event) 
         { 
                 let soc = document.getElementById("societe");
+                let missSoc = document.getElementById('missSoc');
+                let socRE = new RegExp(/^[A-Za-z]+$/);
+
                 let per = document.getElementById("personne");
-                let cp = document.getElementById("cp");
+                let missPer = document.getElementById("missPer");
+                let perRE = new RegExp(/^[A-Za-z]+([ ][A-Za-z]+)?$/);
+
                 let vil = document.getElementById("ville");
-                let mail = document.getElementById("email");
+                let vilRE = new RegExp(/^[A-Za-z]+$/);
+
+                let cp = document.getElementById("cp");
+                let cpRE = new RegExp(/^[0-9]{5}$/);
+
+                let email = document.getElementById("email");
+                let emailRE = new RegExp(/^(([^<()[\]\\.,;:\s@\]+(\.[^<()[\]\\.,;:\s@\]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/);
+
                 let tel = document.getElementById("tel");
+                let telRE = new RegExp(/^0[1-9]([-. ]?[0-9]{2}){4}$/);
+
+
 
             if (soc.validity.valueMissing)
             {
                 event.preventDefault();
                 alert("Veuillez renseigner le nom de la société s.v.p. !");
+                missSoc.textContent = 'Nom de la société manquant';
+                missSoc.style.color = 'red';
                 return false; // n’envoie pas le formulaire
             }
 
@@ -172,59 +196,58 @@ function checkForm(event)
             {
                 event.preventDefault();
                 alert("Veuillez renseigner le nom de la personne à contacter s.v.p. !");
-                return false; // n’envoie pas le formulaire
+                missPer.textContent = 'Nom de la société manquant';
+                missPer.style.color = 'red';
+                return false; 
             }
 
             else if (vil.validity.valueMissing)
             {
                 event.preventDefault();
                 alert("Veuillez renseigner le nom de la ville s.v.p. !");
-                return false; // n’envoie pas le formulaire
+                return false;
             }
 
-            else if (!soc.match(/^[A-Za-z]+$/))
+            else if (!socRE.test(soc.value))
             {
                 event.preventDefault();
                 alert("Nom de société invalide !");
+                missSoc.textContent = 'Nom de la société invalide';
+                missSoc.style.color = 'yellow';
                 return false;
             }
 
-            else if (!per.match(/^[A-Za-z]+$/))
+            else if (!perRE.test(per.value))
             {
                 event.preventDefault();
                 alert("Nom de personne invalide !");
+                missPer.textContent = 'Nom de la personne invalide';
+                missPer.style.color = 'red';
                 return false;
             }
 
-            else if (!vil.match(/^[A-Za-z]+$/))
+            else if (!vilRE.test(vil.value))
             {
                 event.preventDefault();
                 alert("Nom de ville invalide !");
                 return false;
             }
 
-            else if (cp.length<5)
+            else if (!cpRE.test(cp.value))
             {
                 event.preventDefault();
-                alert("Entrez le code postal sur 5 chiffres s.v.p. !");
+                alert("Entrez un code postal valide s.v.p. (sur 5 chiffres) !");
                 return false;
             }
 
-            else if (!cp.match(/^[0-9]*$/))
-            {
-                event.preventDefault();
-                alert("Entrez un code postal valide s.v.p. !");
-                return false;
-            }
-
-            else if (!mail.match(/^(([^<()[\]\\.,;:\s@\]+(\.[^<()[\]\\.,;:\s@\]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/))
+            else if (!emailRE.test(email.value))
             {
                 event.preventDefault();
                 alert("Veuillez renseigner une adresse mail valide s.v.p. !");
                 return false;
             }
 
-            else if (!tel.match("^0[1-9]([-. ]?[0-9]{2}){4}$"))
+            else if (!telRE.test(tel.value))
             {
                 event.preventDefault();
                 alert("Veuillez renseigner un numéro de téléphone valide s.v.p. !");

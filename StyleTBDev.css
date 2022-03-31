@@ -1,0 +1,49 @@
+body {
+    background: linear-gradient(to bottom right, rgb(253, 253, 253), rgb(191, 238, 212));
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .logoafpa{
+        opacity: 0.6;
+        -moz-box-shadow: 10px 10px 5px #888;
+        -webkit-box-shadow: 10px 10px 5px #888;
+        box-shadow: 10px 10px 5px #888;
+  }
+
+h1, h2{
+  text-align: center;
+}
+
+#A{
+    font-size: 2rem;
+}
+
+ol{
+    font-weight: bold;
+}
+
+li{
+    font-size: 1rem;
+}
+
+div{
+    text-align: center;
+}
+
+
+/* ****Media Quieries: Responsive**** */
+
+  @media only screen and (min-width: 768px) {
+  /* tablettes et ordinateurs */
+  }
+  @media only screen and (max-width: 767px) {
+  /* smartphone */
+  }
+  @media only screen and (max-width: 767px) and (orientation: portrait) {
+  /* smartphone en mode portait */
+  }
+
+  /* ******************************** */
+
+
+
