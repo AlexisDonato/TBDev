@@ -1,35 +1,131 @@
 body {
-    background: linear-gradient(to bottom right, rgb(253, 253, 253), rgb(191, 238, 212));
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  text-shadow: 2px 2px #6e6e6e;
+  color:rgb(44, 44, 44);
+}
+  
+/* Matrix */
 
-  .logoafpa{
-        opacity: 0.6;
-        -moz-box-shadow: 10px 10px 5px #888;
-        -webkit-box-shadow: 10px 10px 5px #888;
-        box-shadow: 10px 10px 5px #888;
-  }
+/* ****** */
 
-h1, h2{
+#menu
+{
+  margin-top: 60pt;
+  font-family: 'Lobster', Georgia, Times, serif;
+text-align: center;
+color:rgb(48, 46, 46);
+font-size: 3rem;font-size: 3em;
+font-weight: bold;
+text-shadow: 2px 2px #998b8b;
+}
+    
+
+.menu{
   text-align: center;
+
+  width: auto;
+  height: 70px;
+  background: url(logos.png);
+  background-size: cover;
+  background-size: 50px 70px;
+  background-size: 5% 50%;
+  border-style: groove;
+  z-index: -1;
+  background-size: blur(8px); 
+  margin-bottom: 50pt; 
+  filter:saturate(0.8);
+} 
+
+.backgroundimg{
+  content: "";
+        position: fixed;
+        height: 100%; width: 100%;
+        background: url(html.jpg);
+        background-size: cover;
+        z-index: -1;     
+        -webkit-filter: blur(8px);
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;
 }
 
-#A{
-    font-size: 2rem;
+.logoafpa{
+    opacity: 0.7;
+    width: 15%;
+    height: auto;
+  text-align: center;
+  -moz-box-shadow:inset 0px 0px 6px 6px rgb(77, 77, 77);
+-webkit-box-shadow:inset 0px 0px 6px 6px rgb(32, 32, 32);
+box-shadow:inset 0px 0px 6px 6px rgb(99, 99, 99);
+}
+
+
+aside{
+  display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 250px;
+    height: 200px;
+}
+
+.logohtml{
+  opacity: 0.7;
+  -moz-box-shadow:inset 0px 0px 6px 6px rgb(165, 165, 165);
+  -webkit-box-shadow:inset 0px 0px 6px 6px rgba(255,255,255,1);
+  box-shadow:inset 0px 0px 6px 6px rgba(255,255,255,1);
+}
+
+.logocss{
+  opacity: 0.7;
+}
+
+.logojs{
+  opacity: 0.7;
+}
+
+h1{
+  text-align: center;
+  color:rgb(195, 201, 207);
+  font-size: 3rem;
+}
+
+
+a{
+  color:rgb(195, 201, 207);
+}
+
+#I{
+    font-size: 2em;
 }
 
 ol{
     font-weight: bold;
+    color:rgb(195, 201, 207);
+
+}
+
+ul{
+  color:rgb(195, 201, 207);
 }
 
 li{
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
-div{
+nav{
     text-align: center;
 }
 
+
+.row{
+  display: flex;
+  text-align:center;
+}
+
+aside{
+  flex: 1;
+}
 
 /* ****Media Quieries: Responsive**** */
 
