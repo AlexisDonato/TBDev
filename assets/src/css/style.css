@@ -1,0 +1,75 @@
+html {
+  background: radial-gradient(rgb(134, 49, 0), rgb(53, 21, 1));
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+  
+  #container {
+    position:fixed;
+    touch-action: none;
+    z-index: -1;
+  }
+
+  .innerDiv {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+  }
+
+  fieldset{
+  justify-content: space-around;  
+  position: absolute;
+
+  }
+
+legend{
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px #0e0d0d;
+  background: -webkit-linear-gradient(rgb(250, 1, 1), rgb(97, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+  .button {
+    background-color: #4b0000;
+    border: none;
+    border-radius: 8px;
+    color: rgb(196, 192, 192);
+    padding: 10px 10px;
+    text-align: center;
+    border-style:outset;
+    border-color: rgb(77, 0, 0);
+    text-decoration: thistle;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .button:hover{
+    background-color: rgb(196, 192, 192);
+    color: #4b0000;
+  }
+
+.logoafpa{
+  opacity: 0.6;
+  margin-top: 720px;
+/* filter: brightness(0) saturate(100%) invert(6%) sepia(90%) saturate(5113%) hue-rotate(22deg) brightness(89%) contrast(115%); */
+}
+
+
+
+
+
+
