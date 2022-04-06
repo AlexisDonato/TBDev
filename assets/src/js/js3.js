@@ -1,3 +1,5 @@
+
+// *** Animated button ***
 'use strict';
 
 var tetrominos = [{
@@ -423,7 +425,7 @@ Tetris.prototype.rotateTetrimono = function(curPiece) {
    return rotated;
 };
 
-// assign the player a new peice
+// assign the player a new piece
 Tetris.prototype.newTetromino = function() {
     var pieceNum = Math.floor(Math.random() * tetrominos.length),
         curPiece = this.curPiece;

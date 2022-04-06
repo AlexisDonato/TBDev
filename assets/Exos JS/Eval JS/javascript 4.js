@@ -1,4 +1,4 @@
-let N = 0;
+// let N = 0;
 
 function getInteger(message)
     {
@@ -58,3 +58,4 @@ PAP = TOTREM + PORT;
 
 
 alert("Prix à  payer : " + PAP.toFixed(2));
+console.log("Prix à  payer : " + PAP.toFixed(2));

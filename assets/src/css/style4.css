@@ -23,15 +23,9 @@ a{
 
 fieldset{
     text-align: center;
+    border-color: aquamarine;
 }
 
-legend{
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 2px 2px aquamarine;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 
 .button {
     background-color: #07011f;
@@ -86,23 +80,47 @@ ul{
     justify-content: space-around;
 }
 
+
+/* *** Logos and their animation *** */
+
 .logojs{
     opacity:0.8;
     width: 20%;
     height: auto;
-    margin-top: 500px;
+    margin-top: 480px;
     margin-left:20px;
     border-style: inset;
     position: absolute;
+    border-color: aquamarine;
+    animation-name: heartbeat;
+    animation-duration: 5s;
+    animation-iteration-count: initial;
+}
+@keyframes heartbeat {
+    0%    { width:100px; }
+    50%   { width:10%; }
+    100%  { width:20%; }
 }
 
 .logojs2{
     opacity:0.8;
-    margin-top: 400px;
+    margin-top: 380px;
     margin-left: 1300px;
     border-style: inset;
     position: absolute;
+    border-color: aquamarine;
+    animation-name: heartbeat2;
+    animation-duration: 5s;
+    animation-iteration-count: initial;
 }
+@keyframes heartbeat2 {
+    0%    { width:100px; }
+    50%   { width:20%; }
+    100%  { width:29.1%; }
+}
+
+
+/* *** Animated Background only using css *** */
 
 .bg {
     background: url(https://i.ibb.co/87GbbFP/2799006.jpg) repeat;
@@ -188,8 +206,41 @@ ul{
     animation: sf-fly-by-1 5s linear infinite;
 }
 .star-field .layer:nth-child(2) {
-    animation: sf-fly-by-2 5s linear infinite;
+    animation: sf-fly-by-2 10s linear infinite;
 }
 .star-field .layer:nth-child(3) {
-    animation: sf-fly-by-3 5s linear infinite;
+    animation: sf-fly-by-3 15s linear infinite;
 }
+
+
+/* *** Animated legend only using css*** */
+
+
+#legend {
+    font-weight: 700;
+    text-align: center;
+    font-size: 4rem;
+    font-family: Hack, sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #000, aquamarine, #000);
+    letter-spacing: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: shine 5s linear infinite;
+    position: relative;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position-x: -500%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+  
+
+  
