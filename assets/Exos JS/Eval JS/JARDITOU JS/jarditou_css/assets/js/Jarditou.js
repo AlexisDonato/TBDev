@@ -6,7 +6,7 @@ suj.addEventListener("click", event =>
 })    
 
 function handleInput(element, missElement, type) {
-    const events = [ "change", "input"];
+    const events = ["change", "input"];
     for (const e of events) element.addEventListener(e, function() {
         missElement.textContent = "";
     });
@@ -32,7 +32,7 @@ function checkForm(event)
             let missPre = document.getElementById("missPre");
             let preRE = new RegExp(/^[A-Za-z]+([-][A-Za-z]+)?$/);
 
-            // let sex = docment.getElementByName('sexe');
+            // let sex = document.getElementByName('sexe');
             let missSex = document.getElementById('missSex');
 
 

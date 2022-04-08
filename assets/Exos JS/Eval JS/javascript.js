@@ -8,7 +8,7 @@ let âgées = 0;
 while (true) 
 {
   N = parseInt(prompt('Ecrire un âge'));
-  console.log("Nombre :"+N+" n° "+Ns.length);
+  // console.log("Nombre :"+N+" n° "+Ns.length);
 
   if (N<20)
   {

@@ -82,6 +82,4 @@ var aText = new Array(
     setTimeout("typewriter()", iSpeed);
    }
   }
-  
-  
-  typewriter();
+

@@ -1,5 +1,5 @@
 
-N = parseInt(prompt("Table de multiplication du chiffre :"));
+let N = parseInt(prompt("Table de multiplication du chiffre :"));
 
 
 function multi()

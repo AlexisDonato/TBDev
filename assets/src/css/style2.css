@@ -149,5 +149,6 @@ aside{
     color: rgb(107, 255, 126);
     font-family: American Typewriter, serif;
     font-size: 1em;
-    animation:10s infinite;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
   }
